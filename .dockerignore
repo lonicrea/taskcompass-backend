@@ -1,0 +1,14 @@
+.git
+.gitignore
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.env
+backend_stdout.log
+backend_stderr.log
+clarity_ai.db
+output
+share
+test_*.py
