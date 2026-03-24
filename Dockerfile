@@ -2,7 +2,7 @@ FROM python:3.11-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
-ENV PORT=5000
+ENV PORT=10000
 ENV TASKCOMPASS_DB_PATH=/app/data/clarity_ai.db
 ENV TASKCOMPASS_OUTPUT_DIR=/app/output
 
@@ -19,6 +19,6 @@ COPY . .
 
 RUN mkdir -p /app/data /app/output
 
-EXPOSE 5000
+EXPOSE 10000
 
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "2", "--threads", "4", "--timeout", "120", "wsgi:app"]
+CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:${PORT:-10000} --workers 2 --threads 4 --timeout 120 wsgi:app"]
