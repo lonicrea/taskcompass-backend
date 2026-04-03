@@ -1,7 +1,7 @@
 import sqlite3
 import json
 
-DB_PATH = "clarity_ai.db"
+DB_PATH = "taskcompass.db"
 
 def check_rounds_data():
     conn = sqlite3.connect(DB_PATH)

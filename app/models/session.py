@@ -9,7 +9,7 @@ from app.utils.traditional_chinese import to_traditional_data
 
 
 class SessionManager:
-    DB_PATH = os.environ.get('TASKCOMPASS_DB_PATH', "clarity_ai.db")
+    DB_PATH = os.environ.get('TASKCOMPASS_DB_PATH', "taskcompass.db")
     OUTPUT_DIR = os.environ.get('TASKCOMPASS_OUTPUT_DIR', "output")
     
     @classmethod

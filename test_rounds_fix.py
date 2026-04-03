@@ -2,7 +2,7 @@ import sqlite3
 import json
 from datetime import datetime
 
-DB_PATH = "clarity_ai.db"
+DB_PATH = "taskcompass.db"
 
 def test_rounds_logic():
     """测试轮次数据保存逻辑"""
